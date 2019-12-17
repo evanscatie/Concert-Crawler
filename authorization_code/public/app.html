@@ -1,0 +1,152 @@
+<!--------------------------------------------------------------APP-MAIN-HTML--------------------------------------------------------------------------------->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Front End Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesheets/app-styles.css">
+  </head>
+  
+  
+  <body>
+
+<!-- NAVIGATION --> 
+<!-- _______________________________________________________________________________________________________________________________________________ -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./images/placeholder.com-logo3.png" class="icon" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+                  <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<!-- ARTIST GRID --> 
+<!-- _______________________________________________________________________________________________________________________________________________ -->
+  <div class="padding artist-grid">
+    
+    <div class="card-deck justify-content-center">
+      <!-- ARTIST 0 -->
+      <div class="row card-row">
+        <div class="col-md-6 card-col">
+          <div class="artist-0 card bg-transparent text-white text-center">
+            <img src="./images/vEcBrrYv_400x400.jpg" class="card-img rounded-circle shadow-lg p-3 mb-5 bg-black rounded" alt="...">
+            <div class="card-img-overlay"></div>
+                <div class="card-footer bg-transparent">Artist Name
+                  <div class="row-md-6">
+                    <button class="btn btn-dark">View Upcoming Shows</button>
+                  </div>
+                </div>
+          </div>
+        </div>
+          <!-- ARTIST 1 -->
+          <div class="col-md-6 card-col">
+            <div class="artist-1 card bg-transparent text-white text-center">
+              <img src="./images/vEcBrrYv_400x400.jpg" class="card-img rounded-circle shadow-lg p-3 mb-5 bg-black rounded" alt="...">
+              <div class="card-img-overlay"></div>
+                  <div class="card-footer bg-transparent">Artist Name
+                    <div class="row-md-6">
+                      <button class="btn btn-dark">View Upcoming Shows</button>
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+      <!-- ARTIST 2 -->
+      <div class="row card-row">
+        <div class="col-md-6 card-col">
+          <div class="artist-2 card bg-transparent text-white text-center shadow-lg p-3 mb-5 bg-black rounded">
+            <img src="./images/vEcBrrYv_400x400.jpg" class="card-img rounded-circle" alt="...">
+            <div class="card-img-overlay"></div>
+                <div class="card-footer bg-transparent">Artist Name
+                  <div class="row-md-6">
+                    <button class="btn btn-dark">View Upcoming Shows</button>
+                  </div>
+                </div>
+          </div>
+        </div>
+        <!-- ARTIST 3 -->
+        <div class="col-md-6 card-col">
+          <div class="artist-1 card bg-transparent text-white text-center shadow-lg p-3 mb-5 bg-black rounded">
+            <img src="./images/vEcBrrYv_400x400.jpg" class="card-img rounded-circle" alt="...">
+            <div class="card-img-overlay"></div>
+                <div class="card-footer bg-transparent">Artist Name
+                  <div class="row-md-6">
+                    <button class="btn btn-dark">View Upcoming Shows</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<!-- FOOTER --> 
+<!-- _______________________________________________________________________________________________________________________________________________ -->
+
+   <footer class="container-fluid text-center">
+     <div class="row">
+       <div class="col-sm-4">
+          <h3>Contact Us</h3>
+          <br>
+          <h4>Our address and contact info here</h4>
+        </div>
+       <div class="col-sm-4">
+         <h3>Connect</h3>
+         <a href="#" class="fa fa-facebebook"></a>
+         <a href="#" class="fa fa-twitter"></a>
+         <a href="#" class="fa fa-google"></a>
+         <a href="#" class="fa fa-linkedin"></a>
+      </div>
+      <div class="col-sm-4">
+         <img src="./images/placeholder.com-logo3.png" class="icon" alt="">
+      </div>
+     </div>
+   </footer>
+
+
+
+
+
+<!-- SCRIPT LINKS --> 
+<!-- _______________________________________________________________________________________________________________________________________________ -->
+
+    <button class="btn btn-default" id="obtain-new-token">Click here to refresh</button>
+    <script id="user-profile-template" type="text/x-handlebars-template"></script>
+    <script id="oauth-template" type="text/x-handlebars-template"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+    <script src="./eventful.js"></script>
+
+
+</body>
+</html>
+

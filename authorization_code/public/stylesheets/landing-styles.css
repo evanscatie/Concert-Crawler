@@ -1,0 +1,114 @@
+/* --------------------------------------------------------------LANDING-PAGE-CSS------------------------------------------------------------------------------*/
+
+
+body, html {
+  height: 100%;
+  width: 100%
+}
+
+#obtain-new-token {
+  display: none;
+}
+
+
+.navbar {
+  background-color: rgba(3, 3, 3, 0.0);
+  padding: 1% 0;
+  font: 1.2em;
+}
+
+.icon {
+  max-height: 35px;
+}
+
+.navbar-brand {
+  min-height: 35px;
+  padding: 0 15px 5px;
+
+}
+
+.image-wrapper {
+  background: url(../images/person-singing-1370545.jpg) no-repeat center center fixed;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+}
+
+.home-main-container {
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+
+.home-main-content {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+}
+
+.home-main-content h1 {
+  font-size: 5m;
+  font-weight: 500;
+}
+
+.login-btn {
+  background-color: rgb(231, 31, 144);
+  border: rgb(231, 31, 144);
+  color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  padding: 8px 15px;
+  font-size: 15px;
+}
+.padding {
+  padding: 50px 0;
+}
+
+.about-wrapper {
+background: white;
+color: black;
+padding: 50px;
+}
+
+
+
+.fixed {
+  background: url(../images/person-singing-1370545.jpg) no-repeat center center fixed;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+}
+
+
+footer {
+  width: 100%;
+  background-color: white;
+  padding: 5% 5% 10% 5%;
+  color: black;
+}
+
+.fa {
+  padding: 15px;
+  font-size: 25px;
+  color: black;
+}
+
+/* 
+.fa:hover {
+
+} */
+
+
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 300%;
+  }
+
+};
