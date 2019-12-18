@@ -59,25 +59,75 @@ async function fetchArtists() {
       })
       //console.log(listOfArtists)
       return listOfArtists;
+         
+//  },
 
+//     )}  
 
 
 // CREATES ARTIST CAROUSEL ELEMENT
 // ___________________________________________________________________________________________________
- }).then((listOfArtists) => {
+//  })
+// .then((listOfArtists) => {
+//       let carouselIndicator = 0
+//       listOfArtists.forEach((artist) => {
+//           let createCarouselIndicator = document.createElement('li');
+//           createCarouselIndicator.innerHTML = `
+//             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+//             `
+//               let carouselIndicatorContainer = document.querySelector(".carousel-indicators")
+//               carouselIndicatorContainer.appendChild(createCarouselIndicator)
+//               carouselIndicator++
+//             } 
+//           )
+//         })
+
+    //  }
+  
+        // .then((listOfArtists) => {
+        //   listOfArtists.forEach((artist) => {
+        //       let createCarouselEl = document.createElement('div');
+        //         createCarouselEl.innerHTML = `
+        //           <div class="carousel-item active">
+        //               <img class="d-block w-100" src="${artist.picture}" alt="slide">
+        //               <div class="carousel-caption d-none d-md-block">
+        //                 <h5>${artist.name}</h5>
+        //                 <button class="see-shows-btn">SEE UPCOMING SHOWS</button>
+        //           </div>                
+        //           `
+              
+              
+        //         let carouselElContainer = document.querySelector(".carousel-inner")
+        //         carouselElContainer.appendChild(createCarouselEl)
+        //         } 
+        //       )
+        //     });
+        //   };
+
+
+
+
+
+
+// CREATES ARTIST CARD
+// ___________________________________________________________________________________________________
+
+    }).then((listOfArtists) => {
       listOfArtists.forEach((artist) => {
           let createCard = document.createElement('div');
           createCard.class = "card"
           createCard.innerHTML = `
           <div class="row card-row justify-content-center">
             <div class="col-md-6">
-              <div class="card bg-transparent text-black text-center ">
-                <img src="${artist.picture}" class="card-img rounded-circle shadow-lg p-3 mb-5 bg-black rounded" alt="...">
+              <div class="card text-black text-center ">
+                <img src="${artist.picture}" class="card-img rounded-circle shadow-lg p-0 mb-4  rounded" alt="...">
                   <div class="card-img-overlay"></div>
-                    <div class="card-footer font-weight-bold bg-transparent">${artist.name}
+                    <div class="card-title font-weight-bold bg-transparent">${artist.name}
                     <div class="row-md-6">
-                      <button class="upcoming-shows-btn btn btn-dark">View Upcoming Shows</button>
-                    </div>
+                      <a href="" type="button" class="upcoming-shows-btn btn btn-outline-light login-btn shadow-lg">
+                        View Upcoming Shows
+                      </a>
+                      </div>
                   </div>
                   </div>
                   </div>
@@ -89,40 +139,6 @@ async function fetchArtists() {
           )
         });
       };
-
-
-
-
-
-
-// CREATES ARTIST CARD
-// ___________________________________________________________________________________________________
-
-    // }).then((listOfArtists) => {
-    //   listOfArtists.forEach((artist) => {
-    //       let createCard = document.createElement('div');
-    //       createCard.class = "card"
-    //       createCard.innerHTML = `
-    //       <div class="row card-row justify-content-center">
-    //         <div class="col-md-6">
-    //           <div class="card bg-transparent text-black text-center ">
-    //             <img src="${artist.picture}" class="card-img rounded-circle shadow-lg p-3 mb-5 bg-black rounded" alt="...">
-    //               <div class="card-img-overlay"></div>
-    //                 <div class="card-footer font-weight-bold bg-transparent">${artist.name}
-    //                 <div class="row-md-6">
-    //                   <button class="upcoming-shows-btn btn btn-dark">View Upcoming Shows</button>
-    //                 </div>
-    //               </div>
-    //               </div>
-    //               </div>
-    //               `
-      
-    //           let container = document.querySelector(".artist-grid")
-    //           container.appendChild(createCard)
-    //         } 
-    //       )
-    //     });
-    //   };
 
 
       // CREATES MODAL ELEMENT
@@ -229,7 +245,9 @@ async function fetchArtists() {
       //   </div>
       // </div>
 
-        
+// CREATES POPUP
+// ___________________________________________________________________________________________________
+
 
 // < ERROR HANDLING FOR USER LOGIN >
 // ___________________________________________________________________________________________________

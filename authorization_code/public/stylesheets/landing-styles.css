@@ -15,6 +15,7 @@ body, html {
   background-color: rgba(3, 3, 3, 0.0);
   padding: 1% 0;
   font: 1.2em;
+ 
 }
 
 .icon {
@@ -48,6 +49,7 @@ body, html {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+  font-family: 'Varela', sans-serif;
   color: white;
 }
 
@@ -57,14 +59,18 @@ body, html {
 }
 
 .login-btn {
-  background-color: rgb(231, 31, 144);
-  border: rgb(231, 31, 144);
-  color: white;
+  background-color: transparent;
+  border: 10px 10px rgb(231, 31, 144);
+  color: rgb(255, 255, 255);
   border-radius: 50px;
-  font-weight: bold;
+  /* font-weight: bold; */
   padding: 8px 15px;
   font-size: 15px;
+  font-family: 'Varela', sans-serif; 
+  text-shadow: rgba(3, 3, 3, 0.0);
+  width: 60%;
 }
+
 .padding {
   padding: 50px 0;
 }
@@ -92,6 +98,8 @@ footer {
   background-color: white;
   padding: 5% 5% 10% 5%;
   color: black;
+  font-family: 'Varela', sans-serif;
+  font-size: small;
 }
 
 .fa {
