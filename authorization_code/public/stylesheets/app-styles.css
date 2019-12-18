@@ -49,33 +49,6 @@ width: 100%;
 padding: 15px;
 */
 
-/* } */
-.home-main-container {
-  background: rgb(11, 11, 11) no-repeat center center fixed;
-  display: table;
-  height: 100%;
-  position: relative;
-  vertical-align: middle;
-  width: 100%;
-}
-
-
-.home-main-content {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  color: white;
-}
-
-.home-main-content h1 {
-  font-size: 5m;
-  font-weight: 500;
-}
-
-
-.padding {
-  padding: 80px 0;
-}
 
 
 .top-artist-header {
@@ -91,9 +64,36 @@ padding: 15px;
   font-weight: bolder;
   font-size: 300px;
 }
+
+.test-container {
+  display: none;
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+  /* display: flex; */
+  box-shadow: 0 0 8px 8px spread;
+  justify-content: center;
+  border: transparent;
+  text-align: center;
+  background:  rgba(65, 64, 64, 0.13);
+  color: white;
+  font-family: 'Varela', sans-serif;
+  font-style: thin;
+  border-radius: 25px;
+  }
+
 .artist-grid {
   padding: 10px;
   background: rgba(5, 5, 5, 0.95);
+}
+
+.concert-link {
+  border-radius: 15px;
+  width: 95%;
+  margin-top: 30px ;
+  margin-bottom: 30px;
+  box-shadow: 10px whitesmoke;
+
 }
 
 .concertInfo {
@@ -135,11 +135,6 @@ padding: 15px;
 }
 
 
-.card-img {
-  size: 80%;
-}
-
-
 
 .card-row {
   padding: 30px ;
@@ -160,21 +155,6 @@ padding: 15px;
 
 
   
-.test-container {
-  display: none;
-  width: 80%;
-  height: 80vh;
-  /* display: flex; */
-  box-shadow: 0 0 8px 8px;
-  justify-content: center;
-  /* border: 3px solid red; */
-  text-align: center;
-  background-image:
-      radial-gradient(
-        yellow,
-        #f06d06
-      );
-  }
 
 
 

@@ -77,7 +77,8 @@ async function fetchArtists() {
                   <div class="card-img-overlay"></div>
                     <div id="${artist.name}" class="card-title font-weight-bold bg-transparent">${artist.name}
                       <div class="row-md-6">
-                        <button class="upcoming-shows-btn btn btn-outline-light">View Upcoming Shows</button>
+                      <button type="button" class="upcoming-shows-btn btn btn-outline-light" data-toggle="modal" data-target="#exampleModal">View Upcoming Shows
+                      </button>
                       </div>
                     </div>
                   </div>
@@ -92,6 +93,7 @@ async function fetchArtists() {
         hiddenContainer.innerHTML = getEventDetails(`${artist.name}`)
           //console.log(getEventDetails(`${artist.name}`))
         })
+  
 
       
        let container = document.querySelector(".artist-grid")

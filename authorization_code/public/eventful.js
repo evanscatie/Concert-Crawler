@@ -36,14 +36,19 @@ const eventRequest = 'http://api.eventful.com/json/events/search?...&keywords=' 
     .then((eventResponse) => {
         eventResponse.json().then(getConcertData).then((concertData) => { //returns json file ALL events for the artist
             //console.log(concertData) 
+
             let hiddenContainer= document.querySelector(".test-container")
+
             concertData.forEach((concert) => {
               let myDiv = document.createElement('div')
               let concertInfo =  document.createElement('p')
-              concertInfo.innerHTML = `Concert Time: ${concert.Time}<br>
-              Concert Venue: ${concert.Venue}<br>
-              Concert Address: ${concert.Address}<br>
-               <a href=${concert.EventURL}> Concert URL</a>`;
+              concertInfo.innerHTML = `
+                Concert Time: ${concert.Time}<br>
+                Concert Venue: ${concert.Venue}<br>
+                Concert Address: ${concert.Address}<br>
+                <a class="concert-link btn btn-outline-light" href=${concert.EventURL}> Concert URL</a>
+                `;
+
               myDiv.appendChild(concertInfo)
               hiddenContainer.appendChild(myDiv)
             })
@@ -53,7 +58,7 @@ const eventRequest = 'http://api.eventful.com/json/events/search?...&keywords=' 
         return eventResponse
     } 
 
-    
+
     // If the artist has any upcoming concerts, the following key:values will be stored as an array of objects in the variable getConcertData
     let getConcertData = 
     (data) => {
