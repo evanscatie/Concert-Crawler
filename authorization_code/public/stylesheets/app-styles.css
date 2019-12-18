@@ -92,7 +92,7 @@ body, html {
       padding: 8px;
   }
 
-
+/* 
   #profile-grid { overflow: auto; white-space: normal; }
   #profile-grid .profile { padding-bottom: 40px; }
   #profile-grid .panel { padding: 0 }
@@ -101,9 +101,9 @@ body, html {
   #profile-grid .thumbnail {margin-bottom:6px;}
   #profile-grid .panel-thumbnail { overflow: hidden; }
   #profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
+   */
   
-  
-  /* .card-img {
+  .card-img {
       size: 80%;
   }
 
