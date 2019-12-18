@@ -58,7 +58,13 @@ async function fetchArtists() {
     });
 };
 
+createCard.addEventListener('Click', (e) => {
+  container.classList.add('hidden')
+})
 
+let container = document.querySelector('artist-grid')
+container.appendChild(createCard)
+// classList.remove('hidden')
 
 // < ERROR HANDLING FOR USER LOGIN >
 // ___________________________________________________________________________________________________
