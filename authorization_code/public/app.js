@@ -43,18 +43,66 @@ let settings = {
 }
 
 // Function creates fetch request to Spotify API and returns the user's top 10 artist and returns (name: med picture) as an object.
+
 async function fetchArtists() {
   return await fetch('https://api.spotify.com/v1/me/top/artists', settings)
   .then((response) => {return response.json()})
     .then((data) => {
-      let listOfArtists = data.items.slice(0, 10).map((item) => { //sets #of artist requested to 10
+      let listOfArtists = data.items.slice(0, 10).map((item) => {
         return {
-          name: item.name, 
-          picture: item.images[1].url
+         name: item.name, 
+         picture: item.images[1].url
         }
       })
-      console.log(listOfArtists)
+      //console.log(listOfArtists)
       return listOfArtists;
+
+
+    }).then((listOfArtists) => {
+      listOfArtists.forEach((artist) => {
+        let createCard = document.createElement('div');
+        createCard.class = "card"
+        createCard.style = "width: 40% height: 40%"
+        createCard.innerHTML = `
+        <div class="row card-row justify-content-center">
+          <div class="col-md-6">
+            <div class="card bg-transparent text-black text-center ">
+              <img src="${artist.picture}" class="card-img rounded-circle shadow-lg p-3 mb-5 bg-black rounded" alt="...">
+                <div class="card-img-overlay"></div>
+                  <div class="card-footer font-weight-bold bg-transparent">${artist.name}
+                  <div class="row-md-6">
+                    <button class="btn btn-dark">View Upcoming Shows</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            `
+        
+        <!-- 
+        // <img src="./images/vEcBrrYv_400x400.jpg" class="card-img rounded-circle shadow-lg p-3 mb-5 bg-black rounded" alt="...">
+
+        // <div class="card-img-overlay"></div>
+        // <div class="card-footer bg-transparent">Artist Name
+        //   <div class="row-md-6">
+        //     <button class="btn btn-dark">View Upcoming Shows</button>
+        //   </div>
+        // </div>
+
+      //   createCard.addEventListener("Click", (e) => {
+      //     //containerplaceholder.classList.add('hidden')
+      //   }
+
+
+        let container = document.querySelector(".artist-grid")
+        container.appendChild(createCard)
+      } 
+
+
+
+      // getEventDetails(artist)
+      // let hiddenContainer = document.querySelector(".")
+      // classList.remove("hidden")
+      )
     });
 };
 
