@@ -33,19 +33,27 @@ const eventRequest = 'http://api.eventful.com/json/events/search?...&keywords=' 
 
     // Fetch request to Eventful API for event data on provided artist from Spotify top 10
     const eventResponse= await fetch(`https://cors-anywhere.herokuapp.com/${eventAddress}`, settings)
-        .then((eventResponse) => {
-            eventResponse.json().then(getConcertData).then((concertData) => { //returns json file ALL events for the artist
-                console.log(concertData) 
-            // buttontest.addEventListener('click', e => //This would add event listener to button
-            //  console.log(concertData)
-            }); 
-        });
-
+    .then((eventResponse) => {
+        eventResponse.json().then(getConcertData).then((concertData) => { //returns json file ALL events for the artist
+            //console.log(concertData) 
+            let hiddenContainer= document.querySelector(".test-container")
+            concertData.forEach((concert) => {
+              let myDiv = document.createElement('div')
+              let concertInfo =  document.createElement('p')
+              concertInfo.innerHTML = `Concert Time: ${concert.Time}<br>
+              Concert Venue: ${concert.Venue}<br>
+              Concert Address: ${concert.Address}<br>
+               <a href=${concert.EventURL}> Concert URL</a>`;
+              myDiv.appendChild(concertInfo)
+              hiddenContainer.appendChild(myDiv)
+            })
+        }); 
+    });
     // Return the response
         return eventResponse
     } 
 
-
+    
     // If the artist has any upcoming concerts, the following key:values will be stored as an array of objects in the variable getConcertData
     let getConcertData = 
     (data) => {
