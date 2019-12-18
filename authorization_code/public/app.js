@@ -54,37 +54,77 @@ async function fetchArtists() {
       let listOfArtists = data.items.slice(0, 10).map((item) => {
         return {
          name: item.name, 
-         picture: item.images[1].url
+         picture: item.images[0].url
         }
       })
       //console.log(listOfArtists)
       return listOfArtists;
 
 
+
+// CREATES ARTIST CAROUSEL ELEMENT
+// ___________________________________________________________________________________________________
+ }).then((listOfArtists) => {
+      listOfArtists.forEach((artist) => {
+          let createCard = document.createElement('div');
+          createCard.class = "card"
+          createCard.innerHTML = `
+          <div class="row card-row justify-content-center">
+            <div class="col-md-6">
+              <div class="card bg-transparent text-black text-center ">
+                <img src="${artist.picture}" class="card-img rounded-circle shadow-lg p-3 mb-5 bg-black rounded" alt="...">
+                  <div class="card-img-overlay"></div>
+                    <div class="card-footer font-weight-bold bg-transparent">${artist.name}
+                    <div class="row-md-6">
+                      <button class="upcoming-shows-btn btn btn-dark">View Upcoming Shows</button>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+                  `
+      
+              let container = document.querySelector(".artist-grid")
+              container.appendChild(createCard)
+            } 
+          )
+        });
+      };
+
+
+
+
+
+
 // CREATES ARTIST CARD
 // ___________________________________________________________________________________________________
 
-    }).then((listOfArtists) => {
-      listOfArtists.forEach((artist) => {
-        let createCard = document.createElement('div');
-        createCard.class = "card"
-        createCard.innerHTML = `
-        <div class="row card-row justify-content-center">
-          <div class="col-md-6">
-            <div class="card bg-transparent text-black text-center ">
-              <img src="${artist.picture}" class="card-img rounded-circle shadow-lg p-3 mb-5 bg-black rounded" alt="...">
-                <div class="card-img-overlay"></div>
-                  <div class="card-footer font-weight-bold bg-transparent">${artist.name}
-                  <div class="row-md-6">
-                    <button class="upcoming-shows-btn btn btn-dark">View Upcoming Shows</button>
-                  </div>
-                </div>
-                </div>
-                </div>
-                `
-              
-              
+    // }).then((listOfArtists) => {
+    //   listOfArtists.forEach((artist) => {
+    //       let createCard = document.createElement('div');
+    //       createCard.class = "card"
+    //       createCard.innerHTML = `
+    //       <div class="row card-row justify-content-center">
+    //         <div class="col-md-6">
+    //           <div class="card bg-transparent text-black text-center ">
+    //             <img src="${artist.picture}" class="card-img rounded-circle shadow-lg p-3 mb-5 bg-black rounded" alt="...">
+    //               <div class="card-img-overlay"></div>
+    //                 <div class="card-footer font-weight-bold bg-transparent">${artist.name}
+    //                 <div class="row-md-6">
+    //                   <button class="upcoming-shows-btn btn btn-dark">View Upcoming Shows</button>
+    //                 </div>
+    //               </div>
+    //               </div>
+    //               </div>
+    //               `
       
+    //           let container = document.querySelector(".artist-grid")
+    //           container.appendChild(createCard)
+    //         } 
+    //       )
+    //     });
+    //   };
+
+
       // CREATES MODAL ELEMENT
       // ___________________________________________________________________________________________________
       
@@ -134,9 +174,6 @@ async function fetchArtists() {
             //   }
             
             
-            let container = document.querySelector(".artist-grid")
-            container.appendChild(createCard)
-          } 
           
           //   let container = document.querySelector(".page")
           //   container.appendChild(createCard)
@@ -144,25 +181,22 @@ async function fetchArtists() {
           
         
           
-          // 
-    /* show lightbox when clicking a thumbnail */
-      // $('a.thumb').click(function(event){
-      //   event.preventDefault();
-      //   var content = $('.modal-body');
-      //   content.empty();
-      //     var title = $(this).attr("title");
-      //     $('.modal-title').html(title);      	
-      //     content.html($(this).html());
-      //     $(".modal-profile").modal({show:true});
-      // });
+        
+          /* show lightbox when clicking a thumbnail */
+            // $('a.thumb').click(function(event){
+            //   event.preventDefault();
+            //   var content = $('.modal-body');
+            //   content.empty();
+            //     var title = $(this).attr("title");
+            //     $('.modal-title').html(title);      	
+            //     content.html($(this).html());
+            //     $(".modal-profile").modal({show:true});
+            // });
 
 
       // getEventDetails(artist)
       // let hiddenContainer = document.querySelector(".")
       // classList.remove("hidden")
-      )
-    });
-  };
 
 
 // EVENT MODAL
