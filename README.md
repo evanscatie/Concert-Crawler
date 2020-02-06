@@ -36,11 +36,11 @@ async function fetchArtistNames() {
 If a user tries to log-in with an incorrect password, we return an error message to the user and give them the opportunity to try to log-in again.
 
 
-David wrote various functions to link the user's Spotify data with the Eventful API. Functions were added to take a given Spotify artist and make a fetch request to Eventful, returning the start time, venue name, venue address, and a url to purchase tickets for their next 5 concerts.
+We wrote various functions to link the user's Spotify data with the Eventful API. Functions were added to take a given Spotify artist and make a fetch request to Eventful, returning the start time, venue name, venue address, and a url to purchase tickets for their next 5 concerts.
 
 ## Design
 
-Along with creating a redirect page that stored the user's Spotify authorization token, Catie constructed the framework of both our pages and then devised a styling layout for each.
+Along with creating a redirect page that stored the user's Spotify authorization token, we constructed the framework of both our pages and then devised a styling layout for each.
 
 ## Technologies Used
 JavaScript, HTML, CSS, Bootstrap 4, Node, Express
