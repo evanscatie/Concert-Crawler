@@ -12,7 +12,7 @@
  * https://developer.spotify.com/web-api/authorization-guide/#authorization_code_flow
 */
 
-
+// Consider changing `var` to `const` or `let`
 
 // < CREATING AUTHORIZATION TOKEN WITH CLIENT ID >
 // _____________________________________________________________________________________________
@@ -21,7 +21,7 @@ var request = require('request'); // "Request" library
 var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
-
+// Since this is a backend project, move these to a `.env` file using the `dotenv` npm module.
 var client_id = '72d19513147a4fcd940a10e8dc87cbc8'; // Your client id
 var client_secret = '57c0c12722a74b9582a4ecd242c9d0e2'; // Your secret
 var redirect_uri = 'http://localhost:8888/callback/'; // Your redirect uri

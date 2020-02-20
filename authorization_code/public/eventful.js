@@ -21,6 +21,9 @@ const eventRequest = 'http://api.eventful.com/json/events/search?...&keywords=' 
     
     //&location=${eventLocation} // This is how we would add location in future phases
 
+      // Wondering if your token should be moved to a file that isn't part of the repo?
+      // Also, how long is that token good?
+      // Should it be retrieved via a fetch request?
     // Required settings to make the fetch request work
     let settings = {
         "headers": {
