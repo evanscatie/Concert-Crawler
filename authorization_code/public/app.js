@@ -3,6 +3,8 @@
 // ACCESS TOKEN SCRIPT 
 // __________________________________________________________________________________________________
 
+// I'm seeing this function declared several times.
+// Maybe put it in a `utils.js` that you have a script tag for in your two HTML files.
 // < Obtains parameters from the hash of the URL @return Object >
 function getHashParams() {
   var hashParams = {};
@@ -69,6 +71,8 @@ async function fetchArtists() {
       listOfArtists.forEach((artist) => {
           let createCard = document.createElement('div');
           createCard.class = "card"
+        // Add comment about innerHTML, just to show that you know that this isn't the best idea.
+        // Also, you may get the question about why this isn't a handlebars template instead of an HTML string.
           createCard.innerHTML = `
           <div class="row card-row justify-content-center">
             <div class="col-md-6">
@@ -100,7 +104,7 @@ async function fetchArtists() {
     });
     
 };
-
+// If this is no longer in use, delete it.
 // ADDS EVENT DATA TO ARTIST CARD
 // ___________________________________________________________________________________________________
 // function generateEventCards(artist) {
@@ -136,7 +140,7 @@ async function fetchArtists() {
 //   }
 //   makeRequest() 
 
-
+// This code looks awfully familiar...is it also in `landing-access.token.js`?
 // < ERROR HANDLING FOR USER LOGIN >
 // ___________________________________________________________________________________________________
 if (error) {
